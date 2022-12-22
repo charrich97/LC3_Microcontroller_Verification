@@ -1,0 +1,3 @@
+needs:
+  - writeback_out_hvl.compile
+  - writeback_out_hdl.compile

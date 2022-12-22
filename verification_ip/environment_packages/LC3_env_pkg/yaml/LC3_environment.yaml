@@ -1,0 +1,62 @@
+uvmf:
+  environments:
+    LC3:
+      agents:
+      - initiator_responder: RESPONDER
+        name: data_memory_agent
+        type: data_memory
+      - initiator_responder: RESPONDER
+        name: instruction_memory_agent
+        type: instruction_memory
+      analysis_components: []
+      analysis_exports: []
+      analysis_ports: []
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      hvl_pkg_parameters: []
+      imports:
+      - name: writeback_in_pkg
+      - name: writeback_out_pkg
+      - name: data_memory_pkg
+      - name: execute_in_pkg
+      - name: execute_out_pkg
+      - name: decode_in_pkg
+      - name: decode_out_pkg
+      - name: controller_in_pkg
+      - name: controller_out_pkg
+      - name: fetch_in_pkg
+      - name: fetch_out_pkg
+      - name: memaccess_in_pkg
+      - name: memaccess_out_pkg
+      - name: instruction_memory_pkg
+      - name: controller_env_pkg
+      - name: execute_env_pkg
+      - name: writeback_env_pkg
+      - name: decode_env_pkg
+      - name: fetch_env_pkg
+      - name: memaccess_env_pkg
+      non_uvmf_components: []
+      parameters: []
+      qvip_memory_agents: []
+      scoreboards: []
+      subenvs:
+      - name: writeback
+        parameters: []
+        type: writeback
+      - name: execute
+        parameters: []
+        type: execute
+      - name: controller
+        parameters: []
+        type: controller
+      - name: decode
+        parameters: []
+        type: decode
+      - name: fetch
+        parameters: []
+        type: fetch
+      - name: memaccess
+        parameters: []
+        type: memaccess
+      tlm_connections: []

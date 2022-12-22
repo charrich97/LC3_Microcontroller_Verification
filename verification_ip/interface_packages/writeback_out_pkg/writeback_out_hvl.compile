@@ -1,0 +1,7 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.compile
+  - ./writeback_out_common.compile
+incdir:
+  - .
+src:
+  - writeback_out_pkg.sv

@@ -1,0 +1,8 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.compile
+  - ../../../verification_ip/interface_packages/memaccess_in_pkg/memaccess_in_hvl.compile
+  - ../../../verification_ip/interface_packages/memaccess_out_pkg/memaccess_out_hvl.compile
+
+src:
+  - memaccess_env_pkg.sv
+

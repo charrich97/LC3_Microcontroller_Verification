@@ -1,0 +1,9 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.compile
+  - ./execute_out_common.compile
+incdir:
+  - .
+src:
+  - src/execute_out_if.sv
+  - src/execute_out_monitor_bfm.sv
+  - src/execute_out_driver_bfm.sv

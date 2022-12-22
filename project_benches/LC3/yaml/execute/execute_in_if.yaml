@@ -1,0 +1,127 @@
+uvmf:
+  interfaces:
+    'execute_in':
+      clock: 'clock'
+      reset: 'reset'
+      reset_assertion_level: 'True'
+      hdl_typedefs:
+      - name: enable_execute_t
+        type: bit
+      - name: E_Control_t
+        type: bit [5:0]
+      - name: IR_t
+        type: bit [15:0]
+      - name: npc_in_t
+        type: bit [15:0]
+      - name: bypass_alu_1_t
+        type: bit
+      - name: bypass_alu_2_t
+        type: bit
+      - name: bypass_mem_1_t
+        type: bit
+      - name: bypass_mem_2_t
+        type: bit
+      - name: VSR1_t
+        type: bit [15:0]
+      - name: VSR2_t
+        type: bit [15:0]
+      - name: W_Control_in_t
+        type: bit [1:0]
+      - name: Mem_Control_in_t
+        type: bit
+      - name: Mem_Bypass_Val_t
+        type: bit [15:0]
+      ports: 
+        - name: 'E_control'   
+          width: '6'        
+          dir: 'output' 
+        - name: 'IR'
+          width: '16'        
+          dir: 'output' 
+        - name: 'npc_in'   
+          width: '16'        
+          dir: 'output' 
+        - name: 'bypass_alu_1'
+          width: '1'
+          dir: 'output' 
+        - name: 'bypass_alu_2'   
+          width: '1'        
+          dir: 'output' 
+        - name: 'bypass_mem_1'
+          width: '1'        
+          dir: 'output' 
+        - name: 'bypass_mem_2'   
+          width: '1'        
+          dir: 'output' 
+        - name: 'VSR1'
+          width: '16'
+          dir: 'output' 
+        - name: 'VSR2'
+          width: '16'
+          dir: 'output' 
+        - name: 'W_Control_in'   
+          width: '2'        
+          dir: 'output' 
+        - name: 'Mem_Control_in'   
+          width: '1'        
+          dir: 'output' 
+        - name: 'enable_execute'
+          width: '1'
+          dir: 'output'
+        - name: 'Mem_Bypass_Val'
+          width: '16'
+          dir: 'output'
+      transaction_vars:
+        - name: 'E_control'
+          type: 'bit [5:0]'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'IR'
+          type: 'bit [15:0]'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'npc_in'
+          type: 'bit [15:0]'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'bypass_alu_1'
+          type: 'bit'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'bypass_alu_2'
+          type: 'bit'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'bypass_mem_1'
+          type: 'bit'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'bypass_mem_2'
+          type: 'bit'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'VSR1'
+          type: 'bit [15:0]'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'VSR2'
+          type: 'bit [15:0]'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'W_Control_in'
+          type: 'bit [1:0]'
+          isrand: 'True'
+          iscompare: 'False'
+        - name: 'Mem_Control_in'  
+          type: 'bit'
+          isrand: 'True'
+          iscompare: 'False' 
+        - name: 'enable_execute'
+          type: 'bit'
+          isrand: 'True'
+          iscompare: 'False'
+        - name: 'Mem_Bypass_Val'
+          type: 'bit [15:0]'
+          isrand: 'True'
+          iscompare: 'False'
+       

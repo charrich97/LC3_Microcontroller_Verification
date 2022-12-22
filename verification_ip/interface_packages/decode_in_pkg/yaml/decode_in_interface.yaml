@@ -1,0 +1,165 @@
+uvmf:
+  interfaces:
+    decode_in:
+      clock: clock
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs:
+      - name: op_t
+        type: enum bit [3:0] {ADD=4'b0001, AND=4'b0101, NOT=4'b1001, LD=4'b0010, LDR=4'b0110, LDI=4'b1010, LEA=4'b1110, ST=4'b0011, STR=4'b0111, STI=4'b1011, BR=4'b0000, JMP=4'b1100}
+      - name: enable_decode_t
+        type: enum bit {DECODE_DISABLED = 'b0, DECODE_ENABLED='b1}
+      - name: reg_t
+        type: bit [2:0]
+      - name: im_t
+        type: bit
+      - name: baser_t
+        type: bit [2:0]
+      - name: pcoffset9_t
+        type: bit [8:0]
+      - name: pcoffset6_t
+        type: bit [5:0]
+      - name: imm5_t
+        type: bit [4:0]
+      - name: n_t
+        type: bit
+      - name: z_t
+        type: bit
+      - name: p_t
+        type: bit
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: output
+        name: enable_decode
+        reset_value: '''bz'
+        width: '1'
+      - dir: output
+        name: Instr_dout
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: npc_in
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: psr
+        reset_value: '''bz'
+        width: '3'
+      reset: reset
+      reset_assertion_level: 'True'
+      transaction_constraints:
+      - comment: ''
+        name: valid_opcode_c
+        value: '{opcode inside {ADD, AND, NOT, LD, LDR, LDI, LEA, ST, STR, STI, BR, JMP};}'
+      - comment: ''
+        name: valid_Instr_dout_dr_c
+        value: '{dr inside {[0:7]};}'
+      - comment: ''
+        name: valid_Instr_dout_sr1_c
+        value: '{sr1 inside {[0:7]};}'
+      - comment: ''
+        name: valid_Instr_dout_sr2_c
+        value: '{sr2 inside {[0:7]};}'
+      transaction_vars:
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'False'
+        name: enable_decode
+        type: enable_decode_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: opcode
+        type: op_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: sr1
+        type: reg_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: sr2
+        type: reg_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: dr
+        type: reg_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: im
+        type: im_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: baser
+        type: baser_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: pcoffset9
+        type: pcoffset9_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: pcoffset6
+        type: pcoffset6_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: imm5
+        type: imm5_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: n
+        type: n_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: z
+        type: z_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: p
+        type: p_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: instruction
+        type: bit [15:0]
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: npc_in
+        type: bit [15:0]
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: psr
+        type: bit [2:0]
+        unpacked_dimension: ''
+      use_dpi_link: 'False'

@@ -1,0 +1,5 @@
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/decode_in_pkg/decode_in_pkg.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/decode_out_pkg/decode_out_pkg.vinfo
++incdir+@vinfodir
+decode_env_pkg.sv

@@ -1,0 +1,6 @@
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.vinfo
+@use decode_in_pkg_hdl.vinfo
++incdir+@vinfodir
+src/decode_in_if.sv
+src/decode_in_driver_bfm.sv
+src/decode_in_monitor_bfm.sv

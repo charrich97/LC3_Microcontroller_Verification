@@ -1,0 +1,38 @@
+uvmf:
+  environments:
+    "fetch" :
+      ## Agents are defined in a LIST so that the order is maintained. This is important
+      ## because of how the BFMs are passed in at the bench utilize this same order when
+      ## this environment's initialize() routine is called.
+      agents :
+        - name: "fetch_in_agent_h" 
+          type: "fetch_in"
+          initiator_responder: "RESPONDER"
+        - name: "fetch_out_agent_h"
+          type: "fetch_out"
+          initiator_responder: "RESPONDER"
+      ## Analysis components are defined externally in a 'util_components' structure.
+      ## They are instantiated here.
+      analysis_components :
+        - name: "fetch_predictor_h"
+          type: "fetch_predictor"
+      ## Each scoreboard is keyed by the scoreboard instantiation name with
+      ## information on the scoreboard type and what type of transaction it
+      ## will be parsing
+      scoreboards : 
+        - name: "fetch_scoreboard_h"
+          sb_type: "uvmf_in_order_race_scoreboard"
+          trans_type: "fetch_out_transaction"
+
+      ## Define internal TLM connections. Each entry must have a 'driver' and
+      ## a 'receiver' entry used to determine the full connection.
+      tlm_connections :
+        # Connection 0
+        - driver:   "fetch_in_agent_h.monitored_ap"
+          receiver: "fetch_predictor_h.fetch_in_ae"
+        # Connection 1
+        - driver:   "fetch_out_agent_h.monitored_ap"
+          receiver: "fetch_scoreboard_h.actual_analysis_export"
+        # Connection 2
+        - driver:   "fetch_predictor_h.fetch_predictor_ap"
+          receiver: "fetch_scoreboard_h.expected_analysis_export"

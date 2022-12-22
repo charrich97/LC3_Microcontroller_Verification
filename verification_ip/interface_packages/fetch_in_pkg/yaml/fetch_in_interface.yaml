@@ -1,0 +1,70 @@
+uvmf:
+  interfaces:
+    fetch_in:
+      clock: clock
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs:
+      - name: bit
+        type: bit
+      - name: bit
+        type: bit
+      - name: bit [15:0]
+        type: bit [15:0]
+      - name: bit
+        type: bit
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: output
+        name: enable_updatePC
+        reset_value: '''bz'
+        width: '1'
+      - dir: output
+        name: enable_fetch
+        reset_value: '''bz'
+        width: '1'
+      - dir: output
+        name: taddr
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: br_taken
+        reset_value: '''bz'
+        width: '1'
+      reset: reset
+      reset_assertion_level: 'True'
+      response_info:
+        data: []
+        operation: 1'b1
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: enable_updatePC
+        type: bit
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: enable_fetch
+        type: bit
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: taddr
+        type: bit [15:0]
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: br_taken
+        type: bit
+        unpacked_dimension: ''
+      use_dpi_link: 'False'

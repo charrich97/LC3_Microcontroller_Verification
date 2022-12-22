@@ -1,0 +1,6 @@
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.vinfo
+@use instruction_memory_pkg_hdl.vinfo
++incdir+@vinfodir
+src/instruction_memory_if.sv
+src/instruction_memory_driver_bfm.sv
+src/instruction_memory_monitor_bfm.sv

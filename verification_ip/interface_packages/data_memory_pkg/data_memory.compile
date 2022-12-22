@@ -1,0 +1,3 @@
+needs:
+  - data_memory_hvl.compile
+  - data_memory_hdl.compile

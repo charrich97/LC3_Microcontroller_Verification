@@ -1,0 +1,4 @@
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.vinfo
+@use decode_out_pkg_hdl.vinfo
++incdir+@vinfodir
+decode_out_pkg.sv

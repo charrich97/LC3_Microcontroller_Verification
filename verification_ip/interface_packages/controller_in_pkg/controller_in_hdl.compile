@@ -1,0 +1,9 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.compile
+  - ./controller_in_common.compile
+incdir:
+  - .
+src:
+  - src/controller_in_if.sv
+  - src/controller_in_monitor_bfm.sv
+  - src/controller_in_driver_bfm.sv

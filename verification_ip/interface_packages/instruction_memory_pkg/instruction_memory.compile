@@ -1,0 +1,3 @@
+needs:
+  - instruction_memory_hvl.compile
+  - instruction_memory_hdl.compile

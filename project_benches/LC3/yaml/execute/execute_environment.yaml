@@ -1,0 +1,31 @@
+uvmf:
+  environments:
+    'execute' :
+      imports :
+        - name: 'lc3_prediction_pkg'
+        - name: 'execute_in_pkg'
+        - name: 'execute_out_pkg'
+      agents:
+      - initiator_responder: INITIATOR
+        name: agent_in
+        type: execute_in
+      - initiator_responder: RESPONDER
+        name: agent_out
+        type: execute_out
+      analysis_components:
+        - name: 'predictor'
+          type: 'execute_predictor'
+      scoreboards:
+        - name: 'execute_scoreboard'
+          sb_type: 'uvmf_in_order_scoreboard'
+          trans_type: 'execute_out_transaction'
+      tlm_connections:
+      - driver: agent_in.monitored_ap
+        receiver: predictor.from_in_agent
+        validate: 'True'
+      - driver: agent_out.monitored_ap
+        receiver: execute_scoreboard.actual_analysis_export
+        validate: 'True'
+      - driver: predictor.pred_to_scrbd
+        receiver: execute_scoreboard.expected_analysis_export
+        validate: 'True'

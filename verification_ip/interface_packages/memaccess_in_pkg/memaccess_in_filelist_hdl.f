@@ -1,0 +1,1 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/memaccess_in_pkg/memaccess_in_pkg_hdl.sv

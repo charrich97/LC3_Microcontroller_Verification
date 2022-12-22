@@ -1,0 +1,14 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.compile
+  - ../../../verification_ip/interface_packages/data_memory_pkg/data_memory_hvl.compile
+  - ../../../verification_ip/interface_packages/instruction_memory_pkg/instruction_memory_hvl.compile
+  - ../writeback_env_pkg/writeback_env_pkg.compile
+  - ../execute_env_pkg/execute_env_pkg.compile
+  - ../controller_env_pkg/controller_env_pkg.compile
+  - ../decode_env_pkg/decode_env_pkg.compile
+  - ../fetch_env_pkg/fetch_env_pkg.compile
+  - ../memaccess_env_pkg/memaccess_env_pkg.compile
+
+src:
+  - LC3_env_pkg.sv
+

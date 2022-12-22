@@ -1,0 +1,108 @@
+ uvmf:
+  interfaces:
+    'execute_out':
+      clock: 'clock'
+      reset: 'reset'
+      reset_assertion_level: 'True'
+      hdl_typedefs:
+      - name: aluout_t
+        type: bit [15:0]
+      - name: pcout_t
+        type: bit [15:0]
+      - name: W_Control_out_t
+        type: bit [1:0]
+      - name: Mem_Control_out_t
+        type: bit
+      - name: dr_t
+        type: bit [2:0]
+      - name: sr1_t
+        type: bit [2:0]
+      - name: sr2_t
+        type: bit [2:0]
+      - name: IR_Exec_t
+        type: bit [15:0]
+      - name: NZP_t
+        type: bit [2:0]
+      - name: M_Data_t
+        type: bit [15:0]
+      - name: enable_execute_status_t
+        type: bit
+      ports: 
+        - name: 'W_Control_out'
+          width: '2'
+          dir: 'input'
+        - name: 'Mem_Control_out'
+          width: '1'
+          dir: 'input' 
+        - name: 'aluout'
+          width: '16'        
+          dir: 'input'
+        - name: 'pcout'
+          width: '16'
+          dir: 'input'
+        - name: 'dr'
+          width: '3'
+          dir: 'input'
+        - name: 'sr1'
+          width: '3'
+          dir: 'input'
+        - name: 'sr2'
+          width: '3'
+          dir: 'input'
+        - name: 'IR_Exec'
+          width: '16'        
+          dir: 'input'
+        - name: 'NZP'
+          width: '3'
+          dir: 'input'
+        - name: 'M_Data'
+          width: '16'
+          dir: 'input'
+        - name:  'enable_execute_status'
+          width: '1'
+          dir:   'input'
+      transaction_vars:
+        - name: 'W_Control_out'
+          type: 'bit [1:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'Mem_Control_out'
+          type: 'bit'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'aluout'
+          type: 'bit [15:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'pcout'
+          type: 'bit [15:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'dr'
+          type: 'bit [2:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'sr1'
+          type: 'bit [2:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'sr2'
+          type: 'bit [2:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'IR_Exec'
+          type: 'bit [15:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'NZP'
+          type: 'bit [2:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'M_Data'
+          type: 'bit [15:0]'
+          isrand: 'False'
+          iscompare: 'True'
+        - name: 'enable_execute_status'
+          type: 'bit'
+          isrand: 'False'
+          iscompare: 'False'

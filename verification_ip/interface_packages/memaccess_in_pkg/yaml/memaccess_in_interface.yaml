@@ -1,0 +1,79 @@
+uvmf:
+  interfaces:
+    memaccess_in:
+      clock: clock
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs:
+      - name: mem_state_t
+        type: bit [1:0]
+      - name: M_control_t
+        type: bit
+      - name: M_Data_t
+        type: bit [15:0]
+      - name: M_addr_t
+        type: bit [15:0]
+      - name: DMem_dout_t
+        type: bit [15:0]
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: output
+        name: mem_state
+        reset_value: '''bz'
+        width: '2'
+      - dir: output
+        name: M_control
+        reset_value: '''bz'
+        width: '1'
+      - dir: output
+        name: M_Data
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: M_addr
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: DMem_dout
+        reset_value: '''bz'
+        width: '16'
+      reset: reset
+      reset_assertion_level: 'True'
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: mem_state
+        type: mem_state_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: M_control
+        type: M_control_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: M_Data
+        type: M_Data_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: M_addr
+        type: M_addr_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: DMem_dout
+        type: DMem_dout_t
+        unpacked_dimension: ''
+      use_dpi_link: 'False'

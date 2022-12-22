@@ -1,0 +1,1 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/fetch_out_pkg/fetch_out_pkg.sv

@@ -1,0 +1,1 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/fetch_in_pkg/fetch_in_pkg.sv

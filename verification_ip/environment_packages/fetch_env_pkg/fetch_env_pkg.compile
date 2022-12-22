@@ -1,0 +1,8 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.compile
+  - ../../../verification_ip/interface_packages/fetch_in_pkg/fetch_in_hvl.compile
+  - ../../../verification_ip/interface_packages/fetch_out_pkg/fetch_out_hvl.compile
+
+src:
+  - fetch_env_pkg.sv
+

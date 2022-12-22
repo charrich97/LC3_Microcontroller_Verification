@@ -1,0 +1,3 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/controller_in_pkg/src/controller_in_if.sv
+$UVMF_VIP_LIBRARY_HOME/interface_packages/controller_in_pkg/src/controller_in_monitor_bfm.sv
+$UVMF_VIP_LIBRARY_HOME/interface_packages/controller_in_pkg/src/controller_in_driver_bfm.sv

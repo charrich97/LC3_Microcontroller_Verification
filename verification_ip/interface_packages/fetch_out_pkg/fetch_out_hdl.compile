@@ -1,0 +1,9 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.compile
+  - ./fetch_out_common.compile
+incdir:
+  - .
+src:
+  - src/fetch_out_if.sv
+  - src/fetch_out_monitor_bfm.sv
+  - src/fetch_out_driver_bfm.sv

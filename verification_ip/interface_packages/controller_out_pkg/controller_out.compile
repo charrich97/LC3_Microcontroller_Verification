@@ -1,0 +1,3 @@
+needs:
+  - controller_out_hvl.compile
+  - controller_out_hdl.compile

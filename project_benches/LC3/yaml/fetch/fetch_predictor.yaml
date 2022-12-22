@@ -1,0 +1,24 @@
+
+# This file defines all of the 'utility components' for the possible example YAML
+# example configurations. In general, these are predictors of various types, although
+# a type of 'coverage' is also supported. All utility components can contain any number
+# of analysis exports and analysis imports, each with a unique name and defined type.
+# The user will be responsible for filling out the internals of a predictor and 
+# producing write() calls on the analysis ports. For a coverage component the user will
+# need to define meaningful functional coverage content.
+
+# It is possible that the type of an analsyis port or export will be a parameterized
+# class. Be aware that type mismatches between the port type defined here and the connected
+# port could occur; the generator script does not carry out any checking at that level.
+
+uvmf:
+  util_components:
+    "fetch_predictor" :  
+      type: "predictor"
+      analysis_exports :
+        - name: "fetch_in_ae"
+          type: "fetch_in_transaction"
+      analysis_ports : 
+        - name: "fetch_predictor_ap"
+          type: "fetch_out_transaction"
+

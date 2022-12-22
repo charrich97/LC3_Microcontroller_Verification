@@ -1,0 +1,3 @@
+needs:
+  - decode_out_hvl.compile
+  - decode_out_hdl.compile

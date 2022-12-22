@@ -1,0 +1,10 @@
+uvmf:
+  util_components:
+    'execute_predictor' :
+      type: 'predictor'
+      analysis_exports :
+        - name: 'from_in_agent_ae'
+          type: 'execute_in_transaction'
+      analysis_ports :
+        - name: 'pred_to_scrbd_ap'
+          type: 'execute_out_transaction'

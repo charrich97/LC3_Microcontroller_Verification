@@ -1,0 +1,5 @@
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/controller_in_pkg/controller_in_pkg.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/controller_out_pkg/controller_out_pkg.vinfo
++incdir+@vinfodir
+controller_env_pkg.sv

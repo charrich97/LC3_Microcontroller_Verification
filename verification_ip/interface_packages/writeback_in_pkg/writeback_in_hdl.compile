@@ -1,0 +1,9 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.compile
+  - ./writeback_in_common.compile
+incdir:
+  - .
+src:
+  - src/writeback_in_if.sv
+  - src/writeback_in_monitor_bfm.sv
+  - src/writeback_in_driver_bfm.sv

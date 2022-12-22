@@ -1,0 +1,38 @@
+uvmf:
+  environments:
+    fetch:
+      agents:
+      - initiator_responder: INITIATOR
+        name: fetch_in_agent_h
+        type: fetch_in
+      - initiator_responder: RESPONDER
+        name: fetch_out_agent_h
+        type: fetch_out
+      analysis_components:
+      - name: fetch_predictor_h
+        parameters: []
+        type: fetch_predictor
+      analysis_exports: []
+      analysis_ports: []
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      hvl_pkg_parameters: []
+      non_uvmf_components: []
+      parameters: []
+      qvip_memory_agents: []
+      scoreboards:
+      - name: fetch_scoreboard_h
+        sb_type: uvmf_in_order_race_scoreboard
+        trans_type: fetch_out_transaction
+      subenvs: []
+      tlm_connections:
+      - driver: fetch_in_agent_h.monitored_ap
+        receiver: fetch_predictor_h.fetch_in_ae
+        validate: 'True'
+      - driver: fetch_out_agent_h.monitored_ap
+        receiver: fetch_scoreboard_h.actual_analysis_export
+        validate: 'True'
+      - driver: fetch_predictor_h.fetch_predictor_ap
+        receiver: fetch_scoreboard_h.expected_analysis_export
+        validate: 'True'

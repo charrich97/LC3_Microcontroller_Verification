@@ -1,0 +1,12 @@
+uvmf:
+  environments:
+    instruction_memory:
+      ## Agents are defined in a LIST so that the order is maintained. This is important
+      ## because of how the BFMs are passed in at the bench utilize this same order when
+      ## this environment's initialize() routine is called.
+      agents :
+        - name: "instruction_memory_agent_inst" 
+          type: "instruction_memory" 
+          initiator_responder: "RESPONDER"
+
+

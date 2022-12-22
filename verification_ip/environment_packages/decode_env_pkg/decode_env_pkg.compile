@@ -1,0 +1,8 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.compile
+  - ../../../verification_ip/interface_packages/decode_in_pkg/decode_in_hvl.compile
+  - ../../../verification_ip/interface_packages/decode_out_pkg/decode_out_hvl.compile
+
+src:
+  - decode_env_pkg.sv
+

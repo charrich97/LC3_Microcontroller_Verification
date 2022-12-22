@@ -1,0 +1,4 @@
+needs:
+  - fetch_in_shared.compile
+  - fetch_in_hvl.compile
+  - fetch_in_hdl.compile

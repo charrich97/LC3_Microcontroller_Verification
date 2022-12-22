@@ -1,0 +1,7 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.compile
+  - ./data_memory_common.compile
+incdir:
+  - .
+src:
+  - data_memory_pkg.sv

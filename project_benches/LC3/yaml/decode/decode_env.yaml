@@ -1,0 +1,39 @@
+uvmf:
+  environments:
+    decode:
+      ## Agents are defined in a LIST so that the order is maintained. This is important
+      ## because of how the BFMs are passed in at the bench utilize this same order when
+      ## this environment's initialize() routine is called.
+      agents :
+        - name: "decode_in_agent_inst" 
+          type: "decode_in" 
+          initiator_responder: "RESPONDER"
+        - name: "decode_out_agent_inst"
+          type: "decode_out"
+          initiator_responder: "RESPONDER"
+      ## Analysis components are defined externally in a 'util_components' structure.
+      ## They are instantiated here.
+      analysis_components :
+        - name: "decode_predictor_inst"
+          type: "decode_predictor"
+      ## Each scoreboard is keyed by the scoreboard instantiation name with
+      ## information on the scoreboard type and what type of transaction it
+      ## will be parsing
+      scoreboards : 
+        - name: "decode_scoreboard_inst"
+          sb_type: "uvmf_in_order_race_scoreboard"
+          trans_type: "decode_out_transaction"
+      ## Define internal TLM connections. Each entry must have a 'driver' and
+      ## a 'receiver' entry used to determine the full connection.
+      tlm_connections :
+        # Connection 0
+        - driver: "decode_in_agent_inst.monitored_ap"
+          receiver: "decode_predictor_inst.predictor_ae"
+        # Connection 1
+        - driver:   "decode_out_agent_inst.monitored_ap"
+          receiver: "decode_scoreboard_inst.actual_analysis_export"
+        # Connection 2
+        - driver:   "decode_predictor_inst.predictor_ap"
+          receiver: "decode_scoreboard_inst.expected_analysis_export"
+
+

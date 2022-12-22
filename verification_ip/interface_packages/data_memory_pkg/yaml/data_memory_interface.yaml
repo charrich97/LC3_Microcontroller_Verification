@@ -1,0 +1,91 @@
+uvmf:
+  interfaces:
+    data_memory:
+      clock: clock
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs:
+      - name: Data_dout_t
+        type: bit [15:0]
+      - name: complete_data_t
+        type: bit
+      - name: Data_din_t
+        type: bit [15:0]
+      - name: Data_addr_t
+        type: bit [15:0]
+      - name: Data_rd_t
+        type: bit
+      - name: D_macc_t
+        type: bit
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: input
+        name: Data_dout
+        reset_value: '''bz'
+        width: '16'
+      - dir: input
+        name: complete_data
+        reset_value: '''bz'
+        width: '1'
+      - dir: output
+        name: Data_din
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: Data_addr
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: Data_rd
+        reset_value: '''bz'
+        width: '1'
+      - dir: input
+        name: D_macc
+        reset_value: '''bz'
+        width: '1'
+      reset: reset
+      reset_assertion_level: 'True'
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: Data_dout
+        type: Data_dout_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'True'
+        name: complete_data
+        type: complete_data_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: Data_din
+        type: Data_din_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: Data_addr
+        type: Data_addr_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: Data_rd
+        type: Data_addr_t
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'False'
+        isrand: 'False'
+        name: D_macc
+        type: D_macc_t
+        unpacked_dimension: ''
+      use_dpi_link: 'False'

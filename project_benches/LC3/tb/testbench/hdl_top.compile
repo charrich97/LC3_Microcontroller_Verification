@@ -1,0 +1,22 @@
+incdir:
+  - ${uvm_path}/src
+  - .
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.compile
+  - ../parameters/LC3_parameters_pkg.compile
+  - ../../../../verification_ip/interface_packages/writeback_in_pkg/writeback_in_hdl.compile
+  - ../../../../verification_ip/interface_packages/writeback_out_pkg/writeback_out_hdl.compile
+  - ../../../../verification_ip/interface_packages/execute_in_pkg/execute_in_hdl.compile
+  - ../../../../verification_ip/interface_packages/execute_out_pkg/execute_out_hdl.compile
+  - ../../../../verification_ip/interface_packages/controller_in_pkg/controller_in_hdl.compile
+  - ../../../../verification_ip/interface_packages/controller_out_pkg/controller_out_hdl.compile
+  - ../../../../verification_ip/interface_packages/decode_in_pkg/decode_in_hdl.compile
+  - ../../../../verification_ip/interface_packages/decode_out_pkg/decode_out_hdl.compile
+  - ../../../../verification_ip/interface_packages/fetch_in_pkg/fetch_in_hdl.compile
+  - ../../../../verification_ip/interface_packages/fetch_out_pkg/fetch_out_hdl.compile
+  - ../../../../verification_ip/interface_packages/memaccess_in_pkg/memaccess_in_hdl.compile
+  - ../../../../verification_ip/interface_packages/memaccess_out_pkg/memaccess_out_hdl.compile
+  - ../../../../verification_ip/interface_packages/data_memory_pkg/data_memory_hdl.compile
+  - ../../../../verification_ip/interface_packages/instruction_memory_pkg/instruction_memory_hdl.compile
+src:
+  - hdl_top.sv

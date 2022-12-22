@@ -1,0 +1,18 @@
+@use $UVMF_PROJECT_DIR/rtl/verilog/verilog_dut.vinfo
+@use $UVMF_PROJECT_DIR/tb/parameters/LC3_parameters_pkg.vinfo
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/writeback_in_pkg/writeback_in_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/writeback_out_pkg/writeback_out_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/execute_in_pkg/execute_in_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/execute_out_pkg/execute_out_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/controller_in_pkg/controller_in_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/controller_out_pkg/controller_out_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/decode_in_pkg/decode_in_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/decode_out_pkg/decode_out_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/fetch_in_pkg/fetch_in_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/fetch_out_pkg/fetch_out_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/memaccess_in_pkg/memaccess_in_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/memaccess_out_pkg/memaccess_out_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/data_memory_pkg/data_memory_bfm.vinfo
+@use $UVMF_VIP_LIBRARY_HOME/interface_packages/instruction_memory_pkg/instruction_memory_bfm.vinfo
+hdl_top.sv

@@ -1,0 +1,21 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.compile
+  - ../../../../verification_ip/interface_packages/writeback_in_pkg/writeback_in.compile
+  - ../../../../verification_ip/interface_packages/writeback_out_pkg/writeback_out.compile
+  - ../../../../verification_ip/interface_packages/execute_in_pkg/execute_in.compile
+  - ../../../../verification_ip/interface_packages/execute_out_pkg/execute_out.compile
+  - ../../../../verification_ip/interface_packages/controller_in_pkg/controller_in.compile
+  - ../../../../verification_ip/interface_packages/controller_out_pkg/controller_out.compile
+  - ../../../../verification_ip/interface_packages/decode_in_pkg/decode_in.compile
+  - ../../../../verification_ip/interface_packages/decode_out_pkg/decode_out.compile
+  - ../../../../verification_ip/interface_packages/fetch_in_pkg/fetch_in.compile
+  - ../../../../verification_ip/interface_packages/fetch_out_pkg/fetch_out.compile
+  - ../../../../verification_ip/interface_packages/memaccess_in_pkg/memaccess_in.compile
+  - ../../../../verification_ip/interface_packages/memaccess_out_pkg/memaccess_out.compile
+  - ../../../../verification_ip/interface_packages/data_memory_pkg/data_memory.compile
+  - ../../../../verification_ip/interface_packages/instruction_memory_pkg/instruction_memory.compile
+  - ../../../../verification_ip/environment_packages/LC3_env_pkg/LC3_env_pkg.compile
+  - ../parameters/LC3_parameters_pkg.compile
+  - ../sequences/LC3_sequences_pkg.compile
+src:
+  - LC3_tests_pkg.sv

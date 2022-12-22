@@ -1,0 +1,3 @@
+needs:
+  - memaccess_out_hvl.compile
+  - memaccess_out_hdl.compile

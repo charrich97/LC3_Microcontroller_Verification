@@ -1,0 +1,11 @@
+uvmf:
+  util_components:
+    decode_predictor:
+      analysis_exports:
+      - name: predictor_ae
+        type: decode_in_transaction
+      analysis_ports:
+      - name: predictor_ap
+        type: decode_out_transaction
+      existing_library_component: 'True'
+      type: predictor

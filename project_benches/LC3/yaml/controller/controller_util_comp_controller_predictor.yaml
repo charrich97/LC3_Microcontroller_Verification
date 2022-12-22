@@ -1,0 +1,11 @@
+uvmf:
+  util_components:
+    controller_predictor:
+      analysis_exports:
+      - name: predictor_ae
+        type: 'controller_in_transaction'
+      analysis_ports:
+      - name: predictor_ap
+        type: 'controller_out_transaction'
+      existing_library_component: 'True'
+      type: predictor

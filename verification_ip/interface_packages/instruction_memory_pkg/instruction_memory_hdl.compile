@@ -1,0 +1,9 @@
+needs:
+  - $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.compile
+  - ./instruction_memory_common.compile
+incdir:
+  - .
+src:
+  - src/instruction_memory_if.sv
+  - src/instruction_memory_monitor_bfm.sv
+  - src/instruction_memory_driver_bfm.sv

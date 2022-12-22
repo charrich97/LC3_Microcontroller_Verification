@@ -1,0 +1,1 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/instruction_memory_pkg/instruction_memory_pkg_hdl.sv

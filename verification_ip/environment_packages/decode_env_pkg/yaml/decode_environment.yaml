@@ -1,0 +1,38 @@
+uvmf:
+  environments:
+    decode:
+      agents:
+      - initiator_responder: RESPONDER
+        name: decode_in_agent_inst
+        type: decode_in
+      - initiator_responder: RESPONDER
+        name: decode_out_agent_inst
+        type: decode_out
+      analysis_components:
+      - name: decode_predictor_inst
+        parameters: []
+        type: decode_predictor
+      analysis_exports: []
+      analysis_ports: []
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      hvl_pkg_parameters: []
+      non_uvmf_components: []
+      parameters: []
+      qvip_memory_agents: []
+      scoreboards:
+      - name: decode_scoreboard_inst
+        sb_type: uvmf_in_order_race_scoreboard
+        trans_type: decode_out_transaction
+      subenvs: []
+      tlm_connections:
+      - driver: decode_in_agent_inst.monitored_ap
+        receiver: decode_predictor_inst.predictor_ae
+        validate: 'True'
+      - driver: decode_out_agent_inst.monitored_ap
+        receiver: decode_scoreboard_inst.actual_analysis_export
+        validate: 'True'
+      - driver: decode_predictor_inst.predictor_ap
+        receiver: decode_scoreboard_inst.expected_analysis_export
+        validate: 'True'

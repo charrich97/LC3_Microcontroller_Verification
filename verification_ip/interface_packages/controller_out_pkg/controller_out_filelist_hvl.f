@@ -1,0 +1,1 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/controller_out_pkg/controller_out_pkg.sv

@@ -1,0 +1,48 @@
+uvmf:
+  benches:
+    LC3:
+      active_passive:
+      - bfm_name: writeback_writeback_in_agent_h
+        value: PASSIVE
+      - bfm_name: writeback_writeback_out_agent_h
+        value: PASSIVE
+      - bfm_name: execute_agent_in
+        value: PASSIVE
+      - bfm_name: execute_agent_out
+        value: PASSIVE
+      - bfm_name: controller_controller_in_agent_inst
+        value: PASSIVE
+      - bfm_name: controller_controller_out_agent_inst
+        value: PASSIVE
+      - bfm_name: decode_decode_in_agent_inst
+        value: PASSIVE
+      - bfm_name: decode_decode_out_agent_inst
+        value: PASSIVE
+      - bfm_name: fetch_fetch_in_agent_h
+        value: PASSIVE
+      - bfm_name: fetch_fetch_out_agent_h
+        value: PASSIVE
+      - bfm_name: memaccess_memaccess_in_agent_h
+        value: PASSIVE
+      - bfm_name: memaccess_memaccess_out_agent_h
+        value: PASSIVE
+      - bfm_name: data_memory_agent
+        value: ACTIVE
+      - bfm_name: instruction_memory_agent
+        value: ACTIVE
+      active_passive_default: ACTIVE
+      clock_half_period: 1ns
+      clock_phase_offset: 5ns
+      existing_library_component: 'True'
+      imports:
+      - name: LC3_env_pkg
+      - name: instruction_memory_pkg
+      - name: data_memory_pkg
+      - name: controller_env_pkg
+      - name: execute_env_pkg
+      - name: writeback_env_pkg
+      interface_params: []
+      reset_assertion_level: 'True'
+      reset_duration: 5ns
+      top_env: LC3
+      use_dpi_link: 'False'

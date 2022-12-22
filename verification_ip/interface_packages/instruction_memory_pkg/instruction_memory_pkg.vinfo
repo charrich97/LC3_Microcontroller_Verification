@@ -1,0 +1,4 @@
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg.vinfo
+@use instruction_memory_pkg_hdl.vinfo
++incdir+@vinfodir
+instruction_memory_pkg.sv

@@ -1,0 +1,59 @@
+uvmf:
+  interfaces:
+    writeback_out:
+      clock: clock
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs:
+      - name: VSR1_t
+        type: bit [15:0]
+      - name: VSR2_t
+        type: bit [15:0]
+      - name: psr_t
+        type: bit [2:0]
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: output
+        name: enable_writeback
+        reset_value: '''bz'
+        width: '1'
+      - dir: output
+        name: VSR1
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: VSR2
+        reset_value: '''bz'
+        width: '16'
+      - dir: output
+        name: psr
+        reset_value: '''bz'
+        width: '3'
+      reset: reset
+      reset_assertion_level: 'True'
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: VSR1
+        type: bit [15:0]
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: VSR2
+        type: bit [15:0]
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'True'
+        name: psr
+        type: bit [2:0]
+        unpacked_dimension: ''
+      use_dpi_link: 'False'

@@ -1,0 +1,59 @@
+uvmf:
+  interfaces:
+    fetch_out:
+      clock: clock
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs: []
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters: []
+      ports:
+      - dir: input
+        name: npc
+        reset_value: '''bz'
+        width: '16'
+      - dir: input
+        name: pc
+        reset_value: '''bz'
+        width: '16'
+      - dir: input
+        name: imem_rd
+        reset_value: '''bz'
+        width: '1'
+      - dir: input
+        name: enable_fetch
+        reset_value: '''bz'
+        width: '1'
+      reset: reset
+      reset_assertion_level: 'True'
+      transaction_constraints: []
+      transaction_vars:
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: npc
+        type: bit [15:0]
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: pc
+        type: bit [15:0]
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: imem_rd
+        type: bit
+        unpacked_dimension: ''
+      - comment: ''
+        iscompare: 'True'
+        isrand: 'False'
+        name: enable_fetch
+        type: bit
+        unpacked_dimension: ''
+      use_dpi_link: 'False'
